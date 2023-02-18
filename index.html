@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="page">
+        <div class="header">
+            <h1>Pharmacy System</h1>
+            <h2>We would help you mentain your system</h2>
+        </div>
+        <div class="inpt">
+            <input type="title" placeholder="title" id="title">     
+            <div class="priceDiv">
+                <input onkeyup="getTotal()" type="number"  placeholder="prices" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="discount %" id="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="catogery">
+            <button type="submit" id="create">Create</button>
+        </div>
+
+        <div class="output">
+            <input type="text" placeholder="search" id="search" onkeyup="showSearch(this.value)">
+            <div class="searchButton">
+                <button onclick="searchFunc(this.id)" id="Title">Search by title</button>
+                <button onclick="searchFunc(this.id)" id="Catogery">Search by Catogery</button>
+            </div>
+        </div>
+
+        <div id="deleteAll">
+        </div>
+
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>discount</th>
+                <th>Total</th>
+                <th>category</th>
+                <th>updata</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

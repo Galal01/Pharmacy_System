@@ -1,0 +1,114 @@
+/* Page */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    /* لما تجي تحط الويدز لازم بعدها المارجن اوتو */
+    width: 80%; 
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* input */
+input{
+    width: 100%;
+    background-color: rgb(47, 38, 38);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px 0;
+    transition: .5s;
+    color: white; 
+}
+input:focus{
+    scale: 1.1;
+    background-color: rgb(27, 22, 22) ;
+}
+
+
+/* button */
+button{
+    width: 100%;
+    background-color: rgb(40, 9, 69);
+    color: white;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    /* You have to pus 's' in the end or it will not work */
+    transition: 0.5s;
+}
+button:hover{
+    cursor: pointer;
+    scale: 1.1;
+    letter-spacing: 1px;
+}
+
+
+/* header div */
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    /* color: #C92C6D; */
+    color: white;
+    margin: 20px 0;
+}
+
+/* Input div */
+.priceDiv input{
+    width: 28%;
+}
+#total{
+    background-color: rgb(156, 9, 9);
+    padding: 4px;
+}
+#total::before{
+    content: "Total: ";
+}
+
+/* output and search dive */
+#deleteAll{
+    margin: 10px;
+}
+.searchButton{
+    justify-content: space-between;
+    display: flex;
+}
+.searchButton button {
+    width: 45%;
+    justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+/* Table */
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+th{
+    text-transform: uppercase;
+}
+th, td{
+    padding: 5px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .priceDiv input{
+        width: 25%;
+    } 
+}
+@media (max-width: 700px) {
+    th,td{
+        padding: 1px;
+    }
+}
